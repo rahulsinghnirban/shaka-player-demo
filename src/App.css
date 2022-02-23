@@ -1,0 +1,9 @@
+h1{
+    align-items: flex-start;
+    color:#d400d4;
+  }
+  .container{
+    width: 60%;
+    height: 60%;
+    margin: auto;
+  }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mobitv="urn:mobitv" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" mobitv:segmentTimeline="false" xmlns:scte35="urn:scte:scte35:2014:xml+bin" profiles="urn:mpeg:dash:profile:isoff-live:2011,urn:com:dashif:dash264,http://dashif.org/guidelines/adin/app" maxSegmentDuration="PT6S" minBufferTime="PT2S" type="dynamic" timeShiftBufferDepth="PT15M" minimumUpdatePeriod="PT8760H" availabilityStartTime="1970-01-01T00:00:21Z" suggestedPresentationDelay="PT12S" id="51072" publishTime="2022-02-22T07:03:33Z">
+   <ProgramInformation>
+      <Title>Media Presentation Description by MobiTV.</Title>
+   </ProgramInformation>
+   <Period mobitv:publishTime="2022-02-22T07:03:33Z" id="P0" start="PT0S" mobitv:thumbnails="150_T;640_T">
+      <AdaptationSet contentType="video" mimeType="video/mp4" mobitv:qualityLevel="SD" segmentAlignment="true" startWithSAP="1" par="16:9" minWidth="640" maxWidth="1280" minHeight="360" maxHeight="720" maxFrameRate="30">
+         <Accessibility schemeIdUri="urn:scte:dash:cc:cea-608:2015" value=""/>
+         <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+         <SegmentTemplate startNumber="0" duration="6" initialization="$RepresentationID$/CMAF_init.mp4" media="$RepresentationID$/$Number$.cmfv"/>
+         <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cbcs"/>
+         <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" value="Widevine: SD"/>
+         <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="Playready: SD"/>
+         <Representation id="V864_W" codecs="avc1.4d401e" bandwidth="884736" mobitv:average-bandwidth="0" mobitv:peak-bandwidth="0" width="640" height="360" frameRate="30" sar="1:1"/>
+         <Representation id="V2200_W" codecs="avc1.4d401f" bandwidth="2384800" mobitv:average-bandwidth="0" mobitv:peak-bandwidth="0" width="960" height="540" frameRate="30" sar="1:1"/>
+         <Representation id="V5000_W" codecs="avc1.640028" bandwidth="5000000" mobitv:average-bandwidth="0" mobitv:peak-bandwidth="0" width="1280" height="720" frameRate="30" sar="1:1"/>
+      </AdaptationSet>
+      <AdaptationSet contentType="audio" mimeType="audio/mp4" lang="eng" mobitv:qualityLevel="SD" segmentAlignment="true" startWithSAP="1">
+         <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+         <SegmentTemplate initialization="$RepresentationID$/CMAF_init.mp4" startNumber="0" duration="6" media="$RepresentationID$/$Number$.cmfa" timescale="1"/>
+         <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cbcs"/>
+         <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" value="Widevine: SD"/>
+         <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="Playready: SD"/>
+         <Representation id="A64_ENG" codecs="mp4a.40.5" bandwidth="64000" mobitv:average-bandwidth="0" mobitv:peak-bandwidth="0" audioSamplingRate="48000">
+            <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+         </Representation>
+         <Representation id="A96_ENG" codecs="mp4a.40.5" bandwidth="96000" mobitv:average-bandwidth="0" mobitv:peak-bandwidth="0" audioSamplingRate="48000">
+            <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+         </Representation>
+         <InbandEventStream schemeIdUri="urn:mobitv:event" value="id3"/>
+      </AdaptationSet>
+      <AdaptationSet contentType="audio" mimeType="audio/mp4" lang="eng" mobitv:qualityLevel="SD" segmentAlignment="true" startWithSAP="1">
+         <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+         <SegmentTemplate initialization="$RepresentationID$/CMAF_init.mp4" startNumber="0" duration="6" media="$RepresentationID$/$Number$.cmfa" timescale="1"/>
+         <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cbcs"/>
+         <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" value="Widevine: SD"/>
+         <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="Playready: SD"/>
+         <Representation id="A384_ENG" codecs="ac-3" bandwidth="393216" mobitv:average-bandwidth="0" mobitv:peak-bandwidth="0" audioSamplingRate="48000">
+            <AudioChannelConfiguration schemeIdUri="tag:dolby.com,2014:dash:audio_channel_configuration:2011" value="F801"/>
+         </Representation>
+         <InbandEventStream schemeIdUri="urn:mobitv:event" value="id3"/>
+      </AdaptationSet>
+   </Period>
+</MPD>
